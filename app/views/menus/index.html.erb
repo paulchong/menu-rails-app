@@ -7,18 +7,20 @@
   <% end %>
 </div>
 
-<% @menus.each do |menu| %>
 <ul>
+<% @menus.each do |menu| %>
   <li>
     <%= menu.name %>
-    <%= link_to 'details', '#', remote: true, class: 'menu_items' %><br>
-    <input type='hidden' name='items_form'>
+    <%= link_to 'details', '#', remote: true, class: 'items' %><br>
+
+    <div id='item' style='display: none'>
+        <%= render partial: "items/form", layout: false, locals: { menu: menu, item: menu.items.new } %>
+        <p id='item_details'></p>
+    </div>
   </li>
-</ul>
 <% end %>
 
-<ul>
-  <li class='show_menu'>
+  <li>
+    <span class='add_menu'></span>
   </li>
 </ul>
-

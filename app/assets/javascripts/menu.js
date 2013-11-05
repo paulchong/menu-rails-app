@@ -1,8 +1,7 @@
 var menuHandler = {
 
   createMenu: function(e, data){
-    console.log('ajax is working');
-    $('.show_menu').html(data.name);
+    $('.add_menu').html(data.name);
   }
 }
 

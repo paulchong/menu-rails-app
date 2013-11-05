@@ -1,7 +1,7 @@
 MenuApp::Application.routes.draw do
   root :to => 'menus#index'
   resources :menus, only: [:index, :create] do
-    resources :menuItems, only: [:index, :create]
+    resources :items, only: [:index, :create]
   end
 
   # The priority is based upon order of creation:

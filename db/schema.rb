@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20131104225818) do
 
-  create_table "menu_items", :force => true do |t|
+  create_table "items", :force => true do |t|
     t.string   "name"
     t.integer  "price"
     t.integer  "menu_id"

@@ -1,0 +1,5 @@
+  <%= form_for [menu, item], remote: true do |f| %>
+  <%= f.text_field :name, :placeholder => 'Item Name' %><br>
+  <%= f.text_field :price, :placeholder => 'Price' %>
+  <%= f.submit value='Add Item' %>
+  <% end %>
