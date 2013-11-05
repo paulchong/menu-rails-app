@@ -1,0 +1,24 @@
+<h1>Welcome to Awesome Menus!</h1>
+
+<div class='create_menu'>
+  <%= form_for @menu, remote: true do |f| %>
+  <%= f.text_field :name, :placeholder => 'Menu Name' %>
+  <%= f.submit value='Add Menu' %>
+  <% end %>
+</div>
+
+<% @menus.each do |menu| %>
+<ul>
+  <li>
+    <%= menu.name %>
+    <%= link_to 'details', '#', remote: true, class: 'menu_items' %><br>
+    <input type='hidden' name='items_form'>
+  </li>
+</ul>
+<% end %>
+
+<ul>
+  <li class='show_menu'>
+  </li>
+</ul>
+
